@@ -90,16 +90,21 @@
         position: absolute;
         top: 0;
         left: 0;
-        right: 0;
+        right: -1px;
         bottom: 0;
+        z-index: 100;
         width: 100%;
         border: 1px solid rgba($b, 0.1);
     }
     img {
         display: block;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
         width: 100%;
         height: 100%;
         object-fit: cover;
+        border-radius: 3px;
     }
 }
 
@@ -194,7 +199,7 @@
         z-index: 1;
         a {
             display: block;
-            width: 150px;
+            width: 170px;
             height: 100%;
             font-size: 1.8rem;
             line-height: 80px;
@@ -336,7 +341,7 @@
         position: absolute;
         top: 22px;
         left: 50%;
-        margin-left: -455px;
+        margin-left: -435px;
         padding: 0 10px;
         width: 50px;
         height: 40px;
@@ -654,22 +659,12 @@
         border-radius: 2px;
         background-color: #fff;
         box-shadow: 0 10px 30px 0 rgba(72, 118, 239, 0.1);
-        &:before {
-            position: absolute;
-            top: 0;
-            left: 74.5%;
-            bottom: 0;
-            width: 1px;
-            height: 100%;
-            background-color: #eaedf4;
-            content: "";
-        }
     }
 
     .wrap_service {
         position: relative;
         padding: 30px 32px;
-        width: 74%;
+        width: 100%;
         box-sizing: border-box;
     }
 
@@ -771,7 +766,7 @@
         display: block;
         overflow: hidden;
         position: relative;
-        width: 24%;
+        width: 19%;
         height: 200px;
         border: solid 1px #eaedf4;
         border-radius: 4px;
@@ -1957,16 +1952,6 @@
                 .rvl_image_w {
                     margin-top: 22px;
                     height: 140px;
-                    border-radius: 6px;
-                    overflow: hidden;
-
-                    .rvl_image {
-                        display: block;
-                        width: 100%;
-                        height: 100%;
-                        min-height: 140px;
-                        height: auto;
-                    }
                 }
                 .it_image {
                     display: block;
@@ -2163,7 +2148,7 @@
 // banner
 .wrap_banner {
     overflow: hidden;
-    margin: 50px 0 30px;
+    margin: 120px 0 100px;
     background-color: $prim2;
     .slick-banner1 {
         display: flex;
@@ -2373,7 +2358,7 @@
 // banner
 .wrap_banner2 {
     overflow: hidden;
-    margin: 100px 0 0;
+    margin: 60px 0 20px;
     padding: 40px 0;
     border-top: 1px solid rgba($b, 0.1);
     background-color: rgba($prim2, 0.1);

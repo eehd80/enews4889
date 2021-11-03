@@ -13,6 +13,7 @@ $(function () {
         $gnb = $header.find("#gnb"),
         $navDepth1 = $header.find(".gnb-wrap"),
         $navTotal = $(".navi_total"),
+        $navWrap = $("#ene_index"),
         $navButton = $navTotal.find(".btn_menu");
 
     $navTotal.removeClass("expanded");
@@ -22,6 +23,12 @@ $(function () {
         } else {
             $navTotal.addClass("expanded");
         }
+    });
+    $gnb.on("mouseenter", function () {
+        $navTotal.addClass("expanded");
+    });
+    $navWrap.on("mouseleave", function () {
+        $navTotal.removeClass("expanded");
     });
 
     // header sticky

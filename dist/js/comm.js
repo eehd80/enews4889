@@ -46,13 +46,13 @@ $(function () {
     let $depth1 = $(".depth_1 > li"),
         $depth1Link = $depth1.find("> a");
 
-    $depth1.click(function (event) {
+    $depth1Link.click(function (event) {
         event.preventDefault();
         $depth1.removeClass("active");
         if ($depth1.hasClass("active") === true) {
-            $(this).removeClass("active");
+            $(this).parent().removeClass("active");
         } else {
-            $(this).addClass("active");
+            $(this).parent().addClass("active");
         }
     });
 
